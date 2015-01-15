@@ -1,0 +1,18 @@
+
+<h1>CD Organizer <small>Add a CD here!</small></h1>
+  <form action="/mycd" method="post">
+    <label for="album">Album Name:</label>
+    <input id="album" name="album" type="text">
+
+    <label for="artist">Artist Name:</label>
+    <input id="artist" name="artist" type="text">
+      <button name="submit" class="btn btn-danger">Add CD</button>
+  </form>
+
+  <h4>Here are your CDs!</h4>
+
+    <ul>
+      <% @cds.each() do |cd| %>
+        <li><a href="/mycd/<%= cd.id() %>"><%= cd.album() %></a></li>
+      <% end %>
+    </ul>

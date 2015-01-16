@@ -3,7 +3,6 @@ require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/cd_organizer')
 require('pry')
-#require('.lib/artists')
 
 
 get('/') do
@@ -17,13 +16,21 @@ post('/mycd') do
   @newcd = CD.new({:album =>album, :artist => artist})
   @newcd.save()
   @cds = CD.all()
-  # id = params.fetch("cd_id").to_i
-  # @cd= CD.find(id)
-  # @cd.add_newcd(@newcd)
   erb(:index)
+end
+get('/artist') do
+  @search_artist = params.fetch("search_artist")
+  @cds = CD.all()
+  erb(:artist)
 end
 
 get('/mycd/:id') do
   @foundcd = CD.find(params.fetch("id"))
   erb(:mycd)
+end
+
+get("/clear") do
+  @cds = CD.all()
+  @cds.clear()
+  erb(:index)
 end

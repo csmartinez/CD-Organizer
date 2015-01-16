@@ -9,6 +9,9 @@
       <button name="submit" class="btn btn-danger">Add CD</button>
   </form>
 
+  <form action="/clear"><button type="submit" class="btn btn-danger">Clear all CDs</button>
+  </form>
+
   <h4>Here are your CDs!</h4>
 
     <ul>
@@ -16,3 +19,9 @@
         <li><a href="/mycd/<%= cd.id() %>"><%= cd.album() %></a></li>
       <% end %>
     </ul>
+
+  <form action="/artist" method="get">
+    <label for="search_artist">Search by artist</label>
+    <input id="search_artist" name="search_artist" type="text">
+    <button name="submit" class="btn btn-danger">Search</button>
+  </form>

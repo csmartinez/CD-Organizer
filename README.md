@@ -2,6 +2,8 @@
   Stores and lists album name and album artist of a CD name provided by the user. Also search for CDs by artist and receive all CDs by that artist.
   Ruby version 2.2
 
+![alt tag](https://raw.github.com/csmartinez/CD-Organizer/master/screenshot.png)
+
 ##Project Setup
 
 1. `gem install bundler`

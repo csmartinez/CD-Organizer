@@ -1,5 +1,5 @@
 ##CD Organizer
-  Stores and lists album name and album artist of a CD name provided by the user.
+  Stores and lists album name and album artist of a CD name provided by the user. Also search for CDs by artist and receive all CDs by that artist.
   Ruby version 2.2
 
 ##Project Setup

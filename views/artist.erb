@@ -1,7 +1,8 @@
-<ul>
-<% @cds.each() do |cd| %>
-    <% if cd.artist().eql?(@search_artist) %>
-    <li><%= cd.album() %></li>
+  <% @cds.each() do |cd| %>
+      <% if cd.artist().eql?(@search_artist) %>
+        <h1><%= cd.album() %> by <%= cd.artist() %></h1>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+
+<br>
+<h4><a href="/">Back</a></h4>
